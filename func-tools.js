@@ -13,3 +13,4 @@ const id = x => x;
 const couple = o => Object.keys(o).map( key => [key, o[key]]);
 const decouple = xs => xs.reduce( (acc, curr) => Object.assign(acc, {[curr[0]]: curr[1]}),{});
 const renameFst = (f => xs => xs.map( x => [f(x[0]), x[1]] ))( key => mapping[type][key] || key );
+const flatten = xxs => xxs.reduce((acc, curr)=>Array.prototype.concat(acc, curr), []);
