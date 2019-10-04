@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 
 const decouple = xs => xs.reduce( (acc, curr) => Object.assign(acc, {[curr[0]]: curr[1]}),{});
